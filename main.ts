@@ -1,38 +1,17 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showLeds(`
-        . . # . .
-        . # . # .
-        # . . . #
-        # # # # #
-        # . . . #
-        `)
-    OLED.init(128, 64)
     rounds += 1
     p1 += 1
+    updateScores()
 })
 input.onButtonPressed(Button.AB, function () {
-    basic.showLeds(`
-        # # # # #
-        . . # . .
-        . . # . .
-        . . # . .
-        . . # . .
-        `)
-    OLED.init(128, 64)
     rounds += 1
     ties += 1
+    updateScores()
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showLeds(`
-        # # # . .
-        # . . # .
-        # # # . .
-        # . . # .
-        # # # . .
-        `)
-    OLED.init(128, 64)
     rounds += 1
     p2 += 1
+    updateScores()
 })
 input.onGesture(Gesture.Shake, function () {
     reset()
